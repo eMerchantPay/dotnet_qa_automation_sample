@@ -10,14 +10,14 @@ namespace SampleLib
     {
         Add = 1,
         Substract = 2,
-        Devide = 3,
+        Divide = 3,
         Multiply = 4,
         Power = 5
     }
 
     public class CalculationResult
     {
-        public bool isSuccessful { get; set; }
+        public bool Successful { get; set; }
         public decimal DecimalResult { get; set; }
         public string Message { get; set; }
     }
@@ -33,23 +33,23 @@ namespace SampleLib
                 {
                     case MathOperatorType.Add:
                         result.DecimalResult = a + b;
-                        result.isSuccessful = true;
+                        result.Successful = true;
                         return result;
 
                     case MathOperatorType.Substract:
                         result.DecimalResult = a - b;
-                        result.isSuccessful = true;
+                        result.Successful = true;
                         return result;
-                    case MathOperatorType.Devide:
-                        result.DecimalResult = a - b;
-                        result.isSuccessful = true;
+                    case MathOperatorType.Divide:
+                        result.DecimalResult = a / b;
+                        result.Successful = true;
                         return result;
                     case MathOperatorType.Multiply:
-                        result.DecimalResult = a - b;
-                        result.isSuccessful = true;
+                        result.DecimalResult = a * b;
+                        result.Successful = true;
                         return result;
                     default:
-                        result.isSuccessful = false;
+                        result.Successful = false;
                         result.Message = "Unknown operator";
                         return result;
                 }
@@ -57,7 +57,7 @@ namespace SampleLib
             catch (Exception ex)
             {
 
-                result.isSuccessful = false;
+                result.Successful = false;
                 result.Message = ex.Message;
                 return result;
             }
