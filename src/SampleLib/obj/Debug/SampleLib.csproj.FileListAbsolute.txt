@@ -1,0 +1,6 @@
+D:\repos\dotnet_qa_automation_sample\src\SampleLib\bin\Debug\SampleLib.dll
+D:\repos\dotnet_qa_automation_sample\src\SampleLib\bin\Debug\SampleLib.pdb
+D:\repos\dotnet_qa_automation_sample\src\SampleLib\obj\Debug\SampleLib.csprojAssemblyReference.cache
+D:\repos\dotnet_qa_automation_sample\src\SampleLib\obj\Debug\SampleLib.csproj.CoreCompileInputs.cache
+D:\repos\dotnet_qa_automation_sample\src\SampleLib\obj\Debug\SampleLib.dll
+D:\repos\dotnet_qa_automation_sample\src\SampleLib\obj\Debug\SampleLib.pdb
