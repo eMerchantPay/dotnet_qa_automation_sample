@@ -122,8 +122,8 @@ D:\repos\dotnet_qa_automation_sample\src\SpecflowAutomationTest\bin\Debug\TechTa
 D:\repos\dotnet_qa_automation_sample\src\SpecflowAutomationTest\bin\Debug\TechTalk.SpecFlow.xml
 D:\repos\dotnet_qa_automation_sample\src\SpecflowAutomationTest\bin\Debug\TechTalk.SpecFlow.NUnit.SpecFlowPlugin.pdb
 D:\repos\dotnet_qa_automation_sample\src\SpecflowAutomationTest\bin\Debug\Utf8Json.xml
-D:\repos\dotnet_qa_automation_sample\src\SpecflowAutomationTest\obj\Debug\SpecflowAutomationTest.csprojAssemblyReference.cache
 D:\repos\dotnet_qa_automation_sample\src\SpecflowAutomationTest\obj\Debug\SpecflowAutomationTest.csproj.CoreCompileInputs.cache
 D:\repos\dotnet_qa_automation_sample\src\SpecflowAutomationTest\obj\Debug\SpecflowAutomationTest.csproj.CopyComplete
 D:\repos\dotnet_qa_automation_sample\src\SpecflowAutomationTest\obj\Debug\SpecflowAutomationTest.dll
 D:\repos\dotnet_qa_automation_sample\src\SpecflowAutomationTest\obj\Debug\SpecflowAutomationTest.pdb
+D:\repos\dotnet_qa_automation_sample\src\SpecflowAutomationTest\obj\Debug\SpecflowAutomationTest.csprojAssemblyReference.cache

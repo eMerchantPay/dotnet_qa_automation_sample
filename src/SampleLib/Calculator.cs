@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SampleLib
 {
@@ -12,7 +8,8 @@ namespace SampleLib
         Substract = 2,
         Divide = 3,
         Multiply = 4,
-        Power = 5
+        Power = 5,
+        Unknown = 6
     }
 
     public class CalculationResult
@@ -20,8 +17,6 @@ namespace SampleLib
         
         public bool IsSuccessful { get; set; }
         public decimal DecimalResult { get; set; }
-        public double DoubleResult { get; set; }
-
         public string Message { get; set; }
     }
 
@@ -29,7 +24,6 @@ namespace SampleLib
     {
         public decimal FirstNumber { get; set; }
         public decimal SecondNumber { get; set; }
-
         public static CalculationResult Calculate(decimal FirstNumber, decimal SecondNumber, MathOperatorType mathOperator)
         {
             var result = new CalculationResult();
@@ -42,19 +36,29 @@ namespace SampleLib
                         result.IsSuccessful = true;
                         return result;
                     case MathOperatorType.Substract:
-                        result.DecimalResult = FirstNumber - SecondNumber; ;
+                        result.DecimalResult = FirstNumber - SecondNumber; 
                         result.IsSuccessful = true;
                         return result;
                     case MathOperatorType.Divide:
-                        result.DecimalResult = FirstNumber / SecondNumber; ;
-                        result.IsSuccessful = true;
-                        return result;
+                        if (FirstNumber == 0 && SecondNumber == 0 || FirstNumber == 0 || SecondNumber == 0)
+                        {
+                            result.IsSuccessful = false;
+                            result.Message = "Cannot divide by 0";
+                            return result;
+                        }
+                        else
+                        {
+                            result.DecimalResult = FirstNumber / SecondNumber;
+                            result.IsSuccessful = true;
+                            return result;
+                        }
                     case MathOperatorType.Multiply:
-                        result.DecimalResult = FirstNumber * SecondNumber; ;
+                        result.DecimalResult = FirstNumber * SecondNumber; 
                         result.IsSuccessful = true;
                         return result;
                     case MathOperatorType.Power:
-                        result.DoubleResult = Math.Pow(Convert.ToDouble(FirstNumber), Convert.ToDouble(SecondNumber));
+                        double doubleResult = Math.Pow(Convert.ToDouble(FirstNumber), Convert.ToDouble(SecondNumber));
+                        result.DecimalResult = Convert.ToDecimal(doubleResult);
                         result.IsSuccessful = true;
                         return result;
                     default:
@@ -72,5 +76,4 @@ namespace SampleLib
             }
         }
     }
-
 }
